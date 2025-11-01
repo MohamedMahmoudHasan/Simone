@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*============ Reset ============*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.4;
+    text-transform: capitalize;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color: rgb(32, 201, 151);
+    --gray-color: #33333373;
+    --gray-bg-color: rgb(248, 249, 250);
+    --main-padding:70px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+a {
+    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+span{
+    display: inline-block;
+}
+::selection{
+    color: white;
+    background-color: rgb(32, 201, 151);
+
+}
+
+/*============ End Reset ============*/
+
+/* ############# Container #############*/
+.container {
+   padding: 0 1rem;
+   margin: auto;
+   width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+   .container {
+      width: 540px;
+   }
+}
+@media screen and (min-width: 768px) {
+   .container {
+      width: 720px;
+   }
+}
+@media screen and (min-width: 992px) {
+   .container {
+      width: 960px;
+   }
+}
+@media screen and (min-width: 1200px) {
+   .container {
+      width: 1140px;
+   }
+}
+@media screen and (min-width: 1400px) {
+   .container {
+      width: 1320px;
+   }
+}
+
+/* ############# End Container #############*/
+
+/* ############# Title #############*/
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px 0;
+}
+
+.title p{
+    position: absolute;
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.title p::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+    width: 80px;
+    height: 2px;
+}
+
+.title h2{
+    font-size: calc(1.6rem + 8vw);
+    color: #aaaaaa3f;
+    text-transform: uppercase;
+}
+.title h2::selection{
+    color: white;
+    background-color: rgb(143, 228, 203);
+
+}
+
+/* ############# End Title #############*/
+
+
+/* ############# Nav bar #############*/
+
+nav{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 9999;
+}
+
+nav #menu{display: none;}
+nav label{
+    color: white;
+    margin-left: auto;
+    display: none;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+}
+
+nav .container .nav-menu{
+    display: flex;
+    color: #fff;
+    gap: 15px;
+    margin: auto;
+}
+
+/* ############# End Nav bar #############*/
+
+/* ############# Landing bar #############*/
+
+.landing{
+    background: url('../images/home.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.landing .layer{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+}
+
+.landing .container{
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.landing .container .landing-area{
+    margin: auto 0;
+}
+.landing .container .landing-area h1{
+    font-size: 3.5rem;
+}
+
+.landing .container .landing-area a{
+    margin: 25px 0;
+    border: 2px solid var(--main-color);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: var(--main-color);
+    transition: background-color 0.2s, color 0.5s;
+}
+
+.landing .container .landing-area a:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.landing .container .down{
+    animation:move-down 1s infinite ;
+}
+
+@keyframes move-down {
+    0%{
+        transform: translateY(-35px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    
+}
+
+
+/* ############# End Landing bar #############*/
+
+/* ############# About #############*/
+
+#about{
+    padding: var(--main-padding) 0;
+}
+
+#about .about-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.about-area .about-text{
+    width: calc(70% - 30px);
+}
+.about-area .about-info{
+    width: 30%;
+}
+
+.about-text p{
+    padding: 1.25rem 0px;
+}
+.about-text h3{
+    font-size: 1.625rem;
+}
+.about-text h3 span{
+    color: var(--main-color);
+}
+
+.about-area .about-info li{
+    padding-bottom: 0.625rem;
+    margin-bottom: 0.9375rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.125rem;
+}
+
+.about-area .about-info li:not(:last-child){
+    border-bottom: 2px dashed var(--gray-color);
+}
+
+.about-area .about-info li span{
+    font-weight: 900;
+}
+
+.about-area .about-info a{
+    margin-top: 10px;
+    padding: 15px 35px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50px;
+    transition:  all 0.5s;
+}
+.about-area .about-info a:hover{
+    background-color: rgb(13, 87, 65);
+}
+
+#about .counter{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    row-gap: 30px;
+}
+#about .counter .item{
+    padding: 20px;
+    width: calc((100% - 30px) / 4);
+    font-size: 1.5rem;
+    color: var(--gray-color);
+}
+#about .counter .item h4{
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+}
+#about .counter .item:not(:last-child){
+    border-right: 2px dashed var(--gray-color);
+}
+
+/* ############# End About #############*/
+
+/* ############# What I Do #############*/
+
+#services{
+    padding: var(--main-padding) 0;
+    background-color: var(--gray-bg-color);
+}
+
+#services .services-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+#services .services-area .item{
+    width: calc((100% - 30px) / 2);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+#services .services-area .item span{
+    background-color: white;
+    padding: 16px 18px;
+    color: var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / .5);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+#services .services-area .item .text p{
+    width: 70%;
+    margin-top: 10px;
+}
+#services .services-area .item .text h3{
+    font-size: 1.875rem;
+    font-weight: 500;
+    padding: 0;
+}
+/* ############# End What I Do #############*/
+
+/* ############# Resume #############*/
+
+#resume{
+    padding-block: var(--main-padding);
+}
+#resume .resume-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+#resume .resume-area .item{
+    width: calc((100% - 30px) / 2);
+    border: 1px solid rgb(170 170 170 / .5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#resume .resume-area .item span{
+    background-color: var(--main-color);
+    border-radius:inherit ;
+    color: white;
+    font-size: .875rem;
+    padding:5px 10px ;
+    margin-bottom: 10px;
+}
+
+#resume .resume-area .item .uni{
+    padding-block: 15px;
+    font-size: .875rem;
+    color: tomato;
+}
+
+#resume .skills h2{
+    padding-block: 20px;
+}
+#resume .skills .skills-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#resume .skills .skills-area .item{
+    width: calc((100% - 30px) / 2);
+}
+#resume .skills .skills-area .item .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#resume .skills .skills-area .item .progress{
+    height: 8px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: rgb(170 170 170 / .5);
+}
+#resume .skills .skills-area .item .progress .progress-inner{
+    height: inherit;
+    border-radius: 50px;
+    background-color: var(--main-color);
+}
+#resume .skills a{
+    display: block;
+    width: fit-content;
+    padding: 10px 30px;
+    border: 2px solid #333 ;
+    border-radius: 50px;
+    margin-top: 20px ;
+    transition: all .2s;
+    font-weight: 700;
+    margin: 2% auto  ;
+}
+#resume .skills a:hover{
+    background-color: #333;
+    color: white;
+}
+/* ############# End Resume #############*/
+
+/* ############# Portfolio #############*/
+
+#portfolio{
+    padding-block: var(--main-padding);
+    background-color: var(--gray-bg-color);
+}
+
+#portfolio .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    font-size: 1.25rem;
+}
+#portfolio .nav a{transition: .2s;}
+#portfolio .nav a:hover{color: var(--main-color);}
+#portfolio .nav a.active{
+    color: var(--main-color);
+    position: relative;
+}
+#portfolio .nav a.active::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: calc(100% + 20px);
+    background-color: var(--main-color);
+}
+
+#portfolio .gallary{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.gallary .col{
+    width: calc((100% - 30px) / 3);
+}
+.gallary .col .item{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px ;
+}
+
+.gallary .col .item .image{
+    position: relative;
+}
+.gallary .col .item .image .layer{
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0 0 0 / .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.gallary .col .item .image:hover .layer{
+    opacity: 1;
+}
+.gallary .col .item .image img{
+    transition: filter .2s , transform .6s  .51s ;
+}
+.gallary .col .item .image:hover img{
+    filter: blur(10px);
+    transform: scale(1.3);
+}
+
+/* ############# End Portfolio #############*/
+
+/* ############# Client #############*/
+
+#client{
+    padding: var(--main-padding);
+}
+#client .client-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+#client .client-area .client{
+    width: calc((100% - 30px) / 2);
+    background: var(--gray-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#client .client-area .client .client-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#client .client-area .client .client-info img{
+    width: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+#client .client-area .client .stars{
+    color: gold;
+    margin-top: 20px;
+}
+
+#client .bulets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 18px;
+}
+
+#client .bulets span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--gray-color);
+    transition: .1s;
+}
+#client .bulets span:hover{
+    background-color: var(--main-color);
+    outline: 1px solid var(--main-color);
+    outline-offset: 5px;
+}
+#client .bulets span.active{
+    background-color: var(--main-color);
+    outline: 1px solid var(--main-color);
+    outline-offset: 5px;
+}
+
+
+/* ############# End Client #############*/
+
+/* ############# Contact #############*/
+
+#contact{
+    padding: var(--main-padding);
+    background-color: var(--gray-bg-color);
+}
+
+.contact-area{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.contact-area .address{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 25%;
+}
+
+.contact-area .address i{
+    color: var(--main-color);
+}
+
+.contact-area .send{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    row-gap: 20px;
+}
+
+.contact-area .send form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.contact-area .send form .name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.contact-area .send form input{
+    width: calc((100% - 20px) / 2 );
+    padding: 15px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(32, 201, 150, 0.548) ;
+}
+.contact-area .send form input:focus{
+    border: 1px solid rgba(36, 106, 84, 0.548);
+    outline: none;
+}
+
+#contact .contact-area .send form textarea{
+    padding: 15px 10px;
+    resize: vertical;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid rgba(32, 201, 150, 0.548) ;
+}
+#contact .contact-area .send form textarea:focus{
+    border: 1px solid rgba(36, 106, 84, 0.548);
+    outline: none;
+}
+
+#contact .contact-area .send form button{
+    width: 30%;
+    margin: 2% auto;
+    padding: 15px 20px;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgb(0 0 0 / .5);
+    transition: .4s;
+}
+#contact .contact-area .send form button:hover{
+    background-color: rgb(26, 74, 59);
+    border: 1px solid rgb(26, 74, 59);
+}
+
+
+
+/* ############# End Contact #############*/
+
+/* ############# RWD #############*/
+@media (max-width:1400px) {
+    
+}
+@media (max-width:1200px) {
+    
+}
+@media (max-width:992px) {
+    .about-area .about-text,
+    .about-area .about-info{
+        width: calc(100%);
+    }
+    .about-area .about-info a{
+        margin: 10px auto;
+        padding: 15px 25px;
+        display: block;
+        width: 30%;
+        text-align: center;
+    }
+
+    #services .services-area .item{
+        width: 100%;
+    }
+
+    #resume .resume-area .item{
+        width: 100%;
+    }
+
+    #resume .skills .skills-area .item{
+        width: 100%;
+    }
+
+    .gallary .col{
+        width: calc((100% - 30px) / 2);
+    }
+    .gallary .col:last-child{
+        margin-top: -170px ;
+    }
+
+    #client .client-area .client{
+        width: 100%;
+    }
+
+    .contact-area{
+        font-size: 10px;
+    }
+    #contact .contact-area .send form button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}
+@media (max-width:768px) {
+    nav .container .nav-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        background-color: #000;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s;
+    }
+    nav .container .nav-menu a{
+        display: block;
+        padding-block: 10px;
+    }
+    nav label{
+        display: block;
+    }
+    nav #menu:checked ~ .nav-menu{
+        max-height: 1000px;
+    }
+
+    html{
+        font-size: 12px;
+    }
+
+    #about .counter .item{
+        width: calc((100% - 30px) / 2);
+        
+    }
+
+    .gallary .col{
+        width: 100%;
+    }
+
+    .gallary .col:last-child{
+        margin-top: 0 ;
+    }
+
+    .contact-area .address{
+        width: 100%;
+    }
+    .contact-area .send{
+        width: 100%;
+    }
+
+}
+@media (max-width:576px) {
+    html{
+        font-size: 10px;
+    }
+    .title h2{
+        font-size: 5.5rem;
+    }
+
+    #about .counter .item{
+        width: 100%;
+    }
+
+    #contact .contact-area .send form button{
+        font-size: 7px;
+        padding: 8px 10px;
+    }
+
+    .about-area .about-info a{
+        padding: 10px 15px;
+        
+    }
+
+    .contact-area .send form input{
+        width: 100%;
+    }
+}
+
+/* ############# End RWD #############*/
+
