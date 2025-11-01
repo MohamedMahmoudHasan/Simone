@@ -28,3 +28,22 @@ It’s designed for web developers, designers, or freelancers who want to showca
 ---
 
 ## 📁 Folder Structure
+Simone/
+│
+├── index.html
+├── css/
+│ └── style.css
+├── js/
+│ └── script.js
+├── images/
+│ └── (all project images)
+└── cv/
+└── cv.pdf
+
+---
+
+## 👨‍💻 Author
+**Mohamed Saad**  
+📧 [mohamed.mahmoud.hasan94@gmail.com](mailto:mohamed.mahmoud.hasan94@gmail.com)
+
+
